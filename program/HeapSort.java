@@ -1,6 +1,8 @@
+package program;
+
 public class HeapSort {
 
-  void sort(int[] array) {
+  public static int[] sort(int[] array) {
 
     // Built a heap
     for (int i = array.length / 2 - 1; i >= 0; i--)
@@ -13,9 +15,11 @@ public class HeapSort {
 
       heapify(array, i, 0);
     }
+
+    return array;
   }
 
-  void heapify(int[] array, int heapSize, int rootIndex) {
+  private static void heapify(int[] array, int heapSize, int rootIndex) {
     int largest = rootIndex;
     int leftChild = 2 * rootIndex + 1;
     int rightChild = 2 * rootIndex + 2;
